@@ -3,13 +3,13 @@ const router = express.Router();
 
 import {JsonModel} from "../models/json.model";
 
-router.get("/json", async (req, res) => {
-    const test = new JsonModel({a: 1, b: 2});
-    const testB = new JsonModel("{a: 1, \"b\": 2}");
+router.post("/json", async (req, res) => {
+    // const test = new JsonModel({a: 1, b: 2});
+    // const testB = new JsonModel("{a: 1, \"b\": 2}");
 
-    console.log(test.obj);
+    console.log(req.body);
 
-    res.send("ok2");
+    // res.sendStatus(200);
 });
 
 export default router;
